@@ -1,0 +1,7 @@
+.nav_link {
+    font-size: 30px;
+}
+
+.nav_link:hover {
+    color: blue;
+}
