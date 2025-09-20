@@ -34,11 +34,11 @@ export default function Content() {
                             <div className="ms_head"></div>
                         </div>
                     </div>
-                    <div className="grass-container">
-                        <div className="grass-blade"></div>
-                        <div className="grass-blade"></div>
-                        <div className="grass-blade"></div>
-                        <div className="grass-blade"></div>
+                    <div className="grass_container">
+                        <div className="grass_blade"></div>
+                        <div className="grass_blade"></div>
+                        <div className="grass_blade"></div>
+                        <div className="grass_blade"></div>
                     </div>
                 </div>
                 <ul className="dots top">
