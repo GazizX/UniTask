@@ -6,8 +6,9 @@ export default function MainPage() {
             <header>
                 <h1>Сайт для курсовой</h1>
                 <nav>
-                    <ul>
-                        <li><Link className="nav_link" to="/content">Content</Link></li>
+                    <ul className="nav_list">
+                        <li><Link className="nav_link" to="/task1">Задание 1</Link></li>
+                        <li><Link className="nav_link" to="/task2">Задание 2</Link></li>
                     </ul>
                 </nav>
             </header>

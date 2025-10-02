@@ -1,8 +1,8 @@
 import './pic.css'
-export default function Content() {
+export default function Task1() {
     return (
         <>
-            <h1>Content</h1>
+            <h1>Задание 1</h1>
             <div className="outer_bg">
                 <div className="inner_bg">
                     <div className="clouds">

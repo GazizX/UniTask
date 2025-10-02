@@ -1,0 +1,158 @@
+h1 {
+    text-align: center;
+}
+
+.container {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.container::after {
+    content: "Магазин игрушек";
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container:hover::after {
+    opacity: 1;
+    transform: translateX(-50%);
+    bottom: 14%;
+}
+
+.closet-img {
+    width: 100%;
+    height: auto;
+}
+
+.toy {
+    position: absolute;
+    cursor: pointer;
+}
+
+.toy-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.car {
+    top: 10%;
+    left: 10%;
+    width: 30%;
+}
+
+.car:hover .toy-img {
+    animation: carMove 2s ease-in-out infinite;
+}
+
+.boat {
+    top: 50%;
+    left: 40%;
+    width: 25%;
+}
+
+.boat .toy-img {
+    transform-origin: center bottom;
+}
+
+.boat:hover .toy-img {
+    animation: boatRock 1.5s ease-in-out infinite;
+}
+
+@keyframes carMove {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(20%); }
+    50% { transform: translateX(0); }
+    75% { transform: translateX(-20%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes boatRock {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-15deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(15deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.boy-img {
+    position: absolute;
+    width: 40%;
+    height: auto;
+    bottom: 5%;
+    left: -20%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+@keyframes boyWalk {
+    0% {
+        left: -20%;
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-5%);
+    }
+    40% {
+        transform: translateY(0);
+    }
+    60% {
+        transform: translateY(-8%);
+    }
+    80% {
+        transform: translateY(-5%);
+    }
+    100% {
+        left: 60%;
+        transform: translateY(0);
+    }
+}
+
+.toy::after {
+    content: "Покупаю!";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg) translateY(-50%);
+    color: white;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.car:active::after,
+.boat:active::after {
+    opacity: 1;
+    animation: textPulse 1s ease-in-out infinite;
+}
+
+.car:active ~ .boy-img,
+.boat:active ~ .boy-img {
+    opacity: 1;
+    animation: boyWalk 3s ease-in-out forwards;
+}
+
+@keyframes textPulse {
+    0%, 100% {
+        transform: translateX(-50%) rotate(-45deg) scale(1) translateY(-60%);
+    }
+    50% {
+        transform: translateX(-50%) rotate(-45deg) scale(1.1) translateY(-60%);
+    }
+}

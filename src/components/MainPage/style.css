@@ -1,7 +1,12 @@
 .nav_link {
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .nav_link:hover {
     color: blue;
+}
+
+.nav_list {
+    display: flex;
+    gap: 20px;
 }
