@@ -7,7 +7,7 @@ export default function Task1() {
   return (
     <>
       <h1>Задание 2</h1>
-      <div className="container">
+      <div className="container" id="toyContainer">
         <img src={closetPath} alt="closet" className="closet-img" />
         <div className="toy car">
           <img src={carPath} alt="car" className="toy-img" />

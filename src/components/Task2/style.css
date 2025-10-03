@@ -33,6 +33,7 @@ h1 {
 .closet-img {
     width: 100%;
     height: auto;
+    transition: filter 5s ease-in-out;
 }
 
 .toy {
@@ -43,7 +44,7 @@ h1 {
 .toy-img {
     width: 100%;
     height: auto;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 5s ease-in-out;
 }
 
 .car {
@@ -95,6 +96,7 @@ h1 {
     opacity: 0;
     pointer-events: none;
     z-index: 2;
+    transition: filter 5s ease-in-out;
 }
 
 @keyframes boyWalk {
@@ -145,7 +147,17 @@ h1 {
 .car:active ~ .boy-img,
 .boat:active ~ .boy-img {
     opacity: 1;
-    animation: boyWalk 3s ease-in-out forwards;
+    animation: boyWalk 2s ease-in-out forwards;
+}
+
+
+.container:has(.car:active) .closet-img,
+.container:has(.boat:active) .closet-img,
+.container:has(.car:active) .toy-img,
+.container:has(.boat:active) .toy-img,
+.container:has(.car:active) .boy-img,
+.container:has(.boat:active) .boy-img {
+    filter: sepia(80%) brightness(70%);
 }
 
 @keyframes textPulse {
