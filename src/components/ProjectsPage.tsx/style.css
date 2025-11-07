@@ -1,0 +1,161 @@
+.projects-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 70vh;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-header h2 {
+  color: #b4d6a0;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.page-subtitle {
+  color: #a4b5a0;
+  font-size: 1.2rem;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.project-card {
+  background: rgba(28, 36, 28, 0.9);
+  padding: 2.5rem;
+  border-radius: 15px;
+  border: 2px solid #3b4a3b;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  border-color: #556b2f;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project-header h3 {
+  color: #b4d6a0;
+  margin: 0;
+  font-size: 1.5rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.project-period {
+  background: #2f3e2e;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: #c8f7c5;
+  border: 1px solid #556b2f;
+  white-space: nowrap;
+}
+
+.project-description {
+  color: #e0e4d9;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-technologies,
+.project-achievements {
+  margin-bottom: 1.5rem;
+}
+
+.project-technologies h4,
+.project-achievements h4 {
+  color: #b4d6a0;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: #2f3e2e;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  border: 1px solid #556b2f;
+  color: #c8f7c5;
+  font-size: 0.9rem;
+}
+
+.achievements-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievements-list li {
+  padding: 0.5rem 0;
+  color: #c8f7c5;
+  position: relative;
+  padding-left: 1.2rem;
+  line-height: 1.5;
+}
+
+.achievements-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #556b2f;
+  font-weight: bold;
+}
+
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #3b4a3b;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project-status {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  background: #2f4f2f;
+  color: #90ee90;
+}
+
+.github-link {
+  color: #b4d6a0;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 1px solid #556b2f;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.github-link:hover {
+  background: #2f3e2e;
+  color: #c8f7c5;
+  transform: translateY(-1px);
+}

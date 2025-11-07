@@ -6,7 +6,9 @@ import boyPath from "../../assets/task2/boy.png";
 export default function Task1() {
   return (
     <>
-      <h1>Задание 2</h1>
+      <header className="task-header">
+        <h1>Задание 2</h1>
+      </header>
       <div className="container" id="toyContainer">
         <img src={closetPath} alt="closet" className="closet-img" />
         <div className="toy car">

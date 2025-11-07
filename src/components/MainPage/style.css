@@ -1,122 +1,176 @@
 
-header {
+.hero {
+  background: linear-gradient(rgba(27, 75, 27, 0.5), rgba(0, 0, 0, 0.6)), url(../../assets/hero-forest.jpg);
+  background-repeat: no-repeat;
+  background-position: center calc(50% - 20vh);
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 4rem 2rem;
   text-align: center;
-  padding: 2rem;
-  background: rgba(32, 44, 32, 0.8);
-  backdrop-filter: blur(4px);
   border-bottom: 2px solid #3b4a3b;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-  position: relative;
-  overflow: hidden;
 }
 
-header::before {
-  content: "";
-  position: absolute;
-  top: -50px;
-  left: -50px;
-  width: 200%;
-  height: 200%;
-  background: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
-  opacity: 0.15;
-  transform: rotate(5deg);
+@media (max-width: 530px) {
+  .hero{
+    background-position: center;
+  }
 }
 
-h1 {
+
+.hero h2 {
   font-size: 2.5rem;
   color: #b4d6a0;
-  margin-bottom: 2rem;
-  text-shadow: 2px 2px 4px #0f160f;
-  position: relative;
-  z-index: 1;
+  margin-bottom: 1rem;
 }
 
-.nav_list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.hero p {
+  font-size: 1.3rem;
+  color: #c8f7c5;
+  margin-bottom: 2rem;
+}
+
+.hero-stats {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  position: relative;
-  z-index: 1;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 2rem;
 }
 
-.nav_link {
-  text-decoration: none;
-  font-size: 1.2rem;
-  padding: 0.6rem 1.5rem;
-  border: 2px solid #556b2f;
-  border-radius: 10px;
+.stat {
+  text-align: center;
+  flex: 1;
+  min-width: 120px;
+  max-width: 200px;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #c8f7c5;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #a4b5a0;
+}
+
+.about-preview {
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about-card {
+  background: rgba(28, 36, 28, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px solid #3b4a3b;
+  max-width: 500px;
+  text-align: center;
+  width: 100%;
+}
+
+.about-card h3 {
+  color: #b4d6a0;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.tech-tag {
+  background: #2f3e2e;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  border: 1px solid #556b2f;
+  color: #b4d6a0;
+  font-size: 0.9rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
   background: linear-gradient(145deg, #2f3e2e, #3b4a3b);
   color: #dbe6d1;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 2px solid #556b2f;
   transition: all 0.3s ease;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6),
-              0 3px 8px rgba(0, 0, 0, 0.4);
+  font-weight: bold;
 }
 
-.nav_link:hover {
+.cta-button:hover {
   background: linear-gradient(145deg, #3f573f, #2f3e2e);
-  color: #c8f7c5;
-  transform: scale(1.08);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-
-header::after {
-  content: "🍄 🌿 🍂";
-  display: block;
-  margin-top: 2rem;
-  font-size: 2rem;
-  color: #9dbb87;
-  z-index: 1;
-  position: relative;
+.recent-projects {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-main {
-    height: 60vh;
-}
-
-
-.about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  margin: 3rem auto;
-  padding: 2rem;
-  max-width: 800px;
-  background: rgba(28, 36, 28, 0.85);
-  border: 2px solid #3b4a3b;
-  border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-}
-
-.about_img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #556b2f;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-  background: #2f3e2e;
-}
-
-.about_text {
-  max-width: 500px;
-  color: #e0e4d9;
-}
-
-.about_text h2 {
-  font-size: 2rem;
+.recent-projects h3 {
   color: #b4d6a0;
-  margin-bottom: 0.5rem;
-  text-shadow: 1px 1px 3px #0f160f;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
-.about_text p {
-  font-size: 1.1rem;
-  margin: 0.3rem 0;
+.projects-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.project-preview-card {
+  background: rgba(28, 36, 28, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px solid #3b4a3b;
+  transition: transform 0.3s ease;
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.project-preview-card:hover {
+  transform: translateY(-3px);
+}
+
+.project-preview-card h4 {
+  color: #b4d6a0;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.project-preview-card p {
   color: #c8f7c5;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
 }
 
+.project-link {
+  color: #b4d6a0;
+  text-decoration: none;
+  border-bottom: 1px solid #556b2f;
+  padding-bottom: 2px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.project-link:hover {
+  color: #c8f7c5;
+  border-bottom-color: #b4d6a0;
+}

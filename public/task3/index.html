@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест на знание сленга</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Тест на знание сленга</h1>
+        </header>
+
+        <div id="statsContainer" class="stats-container hidden">
+            <h2>Вопросы закончились!</h2>
+            <div class="stats-info">
+                <p>Правильных ответов: <span id="correctCount" class="correct-count">0</span> из <span id="totalCount" class="total-count">0</span></p>
+                <p>Процент правильных: <span id="percentage" class="percentage">0%</span></p>
+            </div>
+            <button id="resetBtn" class="reset-btn">Пройти тест заново</button>
+        </div>
+
+        <div id="questionsContainer"></div>
+    </div>
+    <script  type="module" src="main.js"></script>
+</body>
+</html>
+

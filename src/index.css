@@ -1,21 +1,241 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: "Merriweather", serif;
-  background: radial-gradient(circle at top, #2f3e2e, #1c241c, #141a14);
-  background-attachment: fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #1a241a;
   color: #e0e4d9;
+  line-height: 1.6;
 }
 
-
-a {
-  text-decoration: none;
-  color: black;
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-li {
+.main-content {
+  flex: 1;
+}
+
+header {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(32, 44, 32, 0.8);
+  backdrop-filter: blur(4px);
+  border-bottom: 2px solid #3b4a3b;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.task-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200%;
+  height: 200%;
+  background: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
+  opacity: 0.15;
+  transform: rotate(5deg);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header-content h1 {
+  font-size: 1.8rem;
+  color: #b4d6a0;
+  margin: 0;
+  text-shadow: 2px 2px 4px #0f160f;
+}
+
+/* Logo */
+.logo {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+
+.logo::before {
+  content: "</>";
+  position: absolute;
+  top: 50%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #b4d6a0;
+  text-shadow: 0 0 8px rgba(180, 214, 160, 0.6);
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #556b2f;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(85, 107, 47, 0.5);
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+/* Navigation */
+.nav_list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.nav_link {
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #556b2f;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #2f3e2e, #3b4a3b);
+  color: #dbe6d1;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6),
+              0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.nav_link:hover {
+  background: linear-gradient(145deg, #3f573f, #2f3e2e);
+  color: #c8f7c5;
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+/* Footer */
+footer {
+  background: rgba(32, 44, 32, 0.9);
+  padding: 2rem;
+  text-align: center;
+  border-top: 2px solid #3b4a3b;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin-bottom: 1rem;
+  color: #a4b5a0;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: #b4d6a0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #c8f7c5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .header-content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .nav_list {
+    gap: 1rem;
+  }
+  
+  .nav_link {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 863px) {
+  .logo{
+    width: 50px;
+    height: 50px;
+  }
+  .logo::before{
+    font-size: 1.5rem;
+  }
+  .header-content {
+    text-align: center;
+  }
+  
+  .header-content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .nav_list {
+    gap: 1rem;
+  }
+  
+  .nav_link {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 532px) {
+  .header-content {
+    text-align: center;
+  }
+  
+  .header-content h1 {
+    font-size: 1.3rem;
+  }
+  
+  .nav_list {
+    gap: 1.2rem;
+  }
+  
+  .nav_link {
+    font-size: 0.9rem;
+  }
 }
