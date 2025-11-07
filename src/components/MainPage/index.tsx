@@ -10,7 +10,7 @@ export default function MainPage() {
       <section className="hero">
         <div className="hero-content">
           <h2>Fullstack-разработчик & Goblin Core Enjoyer</h2>
-          <p>Превращаю сложные задачи в элегантные цифровые решения, сочетая техническое мастерство с творческим подходом к разработке</p>
+          <p>Превращаю сложные задачи в элегантные цифровые решения</p>
           <div className="hero-stats">
             <div className="stat">
               <span className="stat-number">4+</span>
