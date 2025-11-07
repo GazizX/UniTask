@@ -46,6 +46,20 @@ export default function TasksPage() {
       link: "/task3/index.html",
       type: "web-app",
       external: true
+    },
+    {
+      id: 4,
+      title: "Задание 4",
+      subtitle: "Расчет землекопов",
+      description: "Разработка веб-приложения для расчета работников для копания канав",
+      features: [
+        "Использование new Function()",
+        "Разные исходы при определенных входных данных",
+        "3 независимые формы"
+      ],
+      link: "/task4/index.html",
+      type: "forms",
+      external: true
     }
   ];
 
